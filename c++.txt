@@ -1,0 +1,83 @@
+    #include <bits/stdc++.h>
+    #define IO ios_base::sync_with_stdio(false);
+    #define TT cin.tie(NULL); cout.tie(NULL);
+    using namespace std;
+    #define fr(i,a,c) for(int i=a;i<c;i++)    
+    #define pi 3.1415926536
+    #define yes cout<< "YES"<<"\n"
+    #define no  cout<< "NO"<<"\n"
+    #define line cout<<"\n"
+    #define all(v) (v).begin(),(v).end()
+    #define vmn(a) (*min_element(a.begin(),a.end()))   
+    #define vmx(a) (*max_element(a.begin(),a.end()))
+    #define ss second 
+    #define ff first 
+    #define _b break
+    #define _c continue 
+    #define set(x) fixed<<setprecision(x)
+    #define sz(x) (x).size()
+    #define maxxo 1e15
+    #define mod 1000000007
+    #define pb push_back
+    #define int long long
+    #define ll long long  
+    #define PRIME M
+    const int32_t M=1e9+7;
+    const int32_t MM=998244353;
+    #define DEBUG(x) cout << '>' << #x << ':' << x << endl;
+    #define MXE(a) *max_element(all(a))
+    #define MNE(a) *min_element(all(a))
+    #define ln "\n"
+    #define vi vector<int>
+ //=========================================
+    int power(int a,int b){
+      if(b == 0){
+          return 1;
+      }
+      int ans = power(a,b/2);
+      ans*=ans;
+      ans%=mod;
+      if(b % 2){
+          ans *= a;
+      }
+      return ans % mod;
+    }
+
+    //int dp[300001];
+
+
+    //------------------------------------------
+    signed main()
+    {   
+       #ifndef ONLINE_JUDGE  
+      freopen("input.txt", "r", stdin); 
+      freopen("output.txt", "w", stdout); 
+       #endif
+    //------------------------------------------       
+    //IO TT
+    
+    int n;
+    cin>>n;
+    int a[n];
+    int x;
+    fr(i,0,n)cin>>a[i];
+    int j=a[0];
+    fr(i,1,n)
+    {
+      if(a[i]==j)continue;
+      else if(a[i]>j)
+        j=a[i];
+      else
+        break;
+    }
+    fr(i,0,n)
+    if(a[i]!=j)
+    cout<<a[i]<<" ";     
+
+  //while loop ending--- 
+
+    return 0;
+     }//main-- 
+     
+      
+
