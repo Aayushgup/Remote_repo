@@ -74,7 +74,7 @@
     if(a[i]!=j)
     cout<<a[i]<<" ";  
   // aayush kasaudhan   
-
+  // aading this for further commit
   //while loop ending--- 
 
     return 0;
